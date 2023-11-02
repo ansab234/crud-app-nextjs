@@ -5,7 +5,7 @@ import RemoveBtn from "./RemoveBtn";
 
 const getTopics = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/topics", {
+    const res = await fetch(process.env.END_POINT, {
       cache: "no-store",
     });
 

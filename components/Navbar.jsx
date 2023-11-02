@@ -3,7 +3,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className=" bg-slate-500 flex justify-between p-5">
+    <div className=" bg-slate-500 flex justify-between p-5 sticky top-0">
       <div className=" mx-10 items-center flex">
         <Link href={"/"}>CRUD App</Link>
       </div>

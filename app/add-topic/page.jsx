@@ -16,7 +16,8 @@ const AddTopic = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/api/topics", {
+      console.log("FAREQDAGAKVA---", process.env.MONGO_URI)
+      const res = await fetch(process.env.MONGO_URI, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -27,7 +28,6 @@ const AddTopic = () => {
       if (res.ok) {
         router.push("/");
         router.refresh();
-
       } else {
         throw new Error("Failed to create a topic");
       }
